@@ -1,0 +1,44 @@
+<div class="wrapper">
+  <div class="settings-top">
+
+  </div>
+  <div class="markets">
+    <div class="market market_title">
+      <div class="market-section  market-section_name">Market</div>
+      <div class="market-section  market-section_change">Change 1D</div>
+      <div class="market-section  market-section_sell">Sell</div>
+      <div class="market-section  market-section_sell">Buy</div>
+      <div class="market-section  market-section_sentiment">Sentiment</div>
+    </div>
+
+    <div class="market" *ngFor="let market of markets">
+      <div class="market-section  market-section_name">
+        <div class="market-logo">
+          <img src="{{market.imagePath}}" alt="logo" class="market-logo__img">
+        </div>
+        <div class="market-section_name__name-box">
+          <div class="market-section_name__exchange-name">{{market.exchangeName}}</div>
+          <div class="market-section_name__name">{{market.name}}</div>
+        </div>
+
+      </div>
+      <div class="market-section  market-section_change">
+        <div class="market-section_change__values-box" [ngClass]="(market.changeValue>0) ? 'positive' : 'negative'">
+          <div class="market-section_change__change-percent">{{market.changePercent}}%</div>
+          <div class="market-section_change__change-value">({{market.changeValue}})</div>
+        </div>
+        <div class="market-section_change__graph">
+          <app-graphic [data]="market.dataChange" [isPositiveChange]="(market.changeValue > 0)"></app-graphic>
+        </div>
+      </div>
+      <div class="market-section  market-section_sell"><div class="sell-icon">S</div> {{market.sellPrice}}</div>
+      <div class="market-section  market-section_sell"><div class="sell-icon">B</div> {{market.buyPrice}}</div>
+      <div class="market-section  market-section_sentiment">
+          <span class="market-section_sentiment__text">{{market.sentiment}}%  Buying</span>
+          <mat-progress-bar mode="determinate" value="{{market.sentiment}}"></mat-progress-bar>
+      </div>
+    </div>
+
+    <button class="button-add-market"><i class="fa fa-plus"></i>Add Market</button>
+  </div>
+</div>

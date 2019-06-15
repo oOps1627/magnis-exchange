@@ -1,0 +1,76 @@
+@import "abstracts/colors";
+
+.wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.sidenav {
+  width: 250px;
+  background-color: $accent;
+  color: $white-text;
+  box-sizing: border-box;
+}
+
+
+.sidenav-box {
+  border-bottom: 0.5px solid lighten($accent, 10%);
+  padding: 20px 0;
+}
+.sidenav-box_user-box {
+  padding: 80px 20px 15px;
+  text-align: center;
+}
+.user-picture {
+  width: 70px;
+  height: 70px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 2px solid $light-background;
+  border-radius: 50%;
+  margin: 15px auto;
+}
+.button {
+  width: 80%;
+  display: block;
+  font-size: 14px;
+  margin: 35px auto;
+  background-color: #298CFF;
+  color: white;
+}
+.navigation-list {
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+}
+.navigation-list__item {
+  display: block;
+  width: 100%;
+  padding: 15px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  box-sizing: border-box;
+  &:hover {
+    background-color: lighten($accent, 10);
+  }
+  & .fa {
+    font-size: 20px;
+    margin-right: 15px;
+    padding-top: 2px;
+  }
+}
+.navigation-list__item_active {
+  background-color: darken($accent, 5%);
+}
+
+.header {
+  width: 100%;
+  height: 80px;
+  background-color: #fff;
+}
+
+.sidenav-content {
+  background-color: $light-background;
+}

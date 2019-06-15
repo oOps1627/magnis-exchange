@@ -1,0 +1,109 @@
+@import "abstracts/colors";
+@import "components/market";
+
+.wrapper {
+  padding: 10px 40px;
+}
+.markets {
+  padding: 20px 50px;
+}
+
+.market_title {
+  background-color: inherit;
+  height: auto;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #000;
+}
+
+.market-logo {
+  width: 50px;
+  height: 100%;
+}
+.market-logo__img {
+  max-width: 100%;
+  height: auto; max-height: 100%;
+}
+.market-section_name {
+  width: 20%;
+}
+.market-section_name__name-box {
+  display: block;
+  margin: 0 10px;
+}
+.market-section_name__exchange-name {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #000;
+}
+.market-section_name__name {
+  font-size: 12px;
+  margin-top: 5px;
+}
+.market-section_change__change-value {
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.market-section_change {
+  width: 25%;
+  font-weight: bold;
+}
+.market-section_change__graph {
+  width: 150px;
+  height: 100%;
+  margin: 0 15px;
+  position: relative;
+}
+.market-section_change__change-percent {
+  font-size: 16px;
+}
+
+.market-section_sell {
+  width: 15%;
+  font-size: 16px;
+  font-weight: bold;
+}
+.sell-icon {
+  width: 1.5em;
+  height: 1.5em;
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $light-background;
+}
+
+.market-section_sentiment {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.market-section_sentiment__text {
+  align-self: flex-start;
+  margin: 5px 0;
+}
+
+.button-add-market {
+  width: 100%;
+  height: 60px;
+  margin-top: 10px;
+  background-color: #f9f9f9;
+  color: $blue;
+  cursor: pointer;
+  border: none;
+  outline-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  & .fa {
+    font-size: 18px;
+    margin-right: 10px;
+  }
+  &:hover {
+    background-color: #fbfbfb;
+  }
+}

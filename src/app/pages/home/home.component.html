@@ -1,0 +1,43 @@
+<mat-sidenav-container class="wrapper">
+  <mat-sidenav class="sidenav reverse" #sidenav mode="side" [opened]="true">
+
+    <div class="sidenav-box sidenav-box_user-box">
+      <div class="user-picture" style="background-image: url(../assets/images/user-default.svg)"></div>
+      <span>Name Surname</span>
+      <button mat-button class="button">Complete Profile</button>
+    </div>
+
+    <div class="sidenav-box">
+      <ul class="navigation-list">
+        <li class="navigation-list__item" [routerLink]="['/home/watchlist']" routerLinkActive="navigation-list__item_active">
+          <i class="fa fa-list-ul" aria-hidden="true"></i>Watchlist
+        </li>
+        <li class="navigation-list__item" [routerLink]="['/home/portfolio']" routerLinkActive="navigation-list__item_active">
+          <i class="fa fa-briefcase" aria-hidden="true"></i>Portfolio
+        </li>
+        <li class="navigation-list__item" [routerLink]="['/home/trade-markets']" routerLinkActive="navigation-list__item_active">
+          <i class="fa fa-bar-chart" aria-hidden="true"></i>Trade Markets
+        </li>
+        <li class="navigation-list__item" [routerLink]="['/home/copy-traders']" routerLinkActive="navigation-list__item_active">
+          <i class="fa fa-clone" aria-hidden="true"></i>Copy Trades
+        </li>
+      </ul>
+    </div>
+    <div class="sidenav-box">
+      <ul class="navigation-list">
+        <li class="navigation-list__item"><i class="fa fa-cog" aria-hidden="true"></i>Settings</li>
+        <li class="navigation-list__item"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</li>
+      </ul>
+    </div>
+  </mat-sidenav>
+
+  <mat-sidenav-content class="sidenav-content">
+    <header class="header">
+      <label>
+        <input type="text" class="search">
+      </label>
+    </header>
+    <button mat-button (click)="sidenav.toggle()">sidenav.toggle()</button>
+      <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
