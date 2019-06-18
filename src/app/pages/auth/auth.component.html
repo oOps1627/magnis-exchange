@@ -1,0 +1,20 @@
+<div class="wrapper">
+  <div class="auth-box">
+    <div class="tabs-box">
+      <a mat-button [routerLink]="['/auth/login']" [routerLinkActive]="'tab-active'" class="tab">Sign In</a>
+      <a mat-button [routerLink]="['/auth/register']" [routerLinkActive]="'tab-active'" class="tab">Sign Up</a>
+    </div>
+    <div class="form-content">
+      <router-outlet></router-outlet>
+    </div>
+
+    <div class="socials-box">
+      <span>Or login via</span>
+      <div class="socials-list">
+        <div class="social"><img src="../assets/images/facebook-auth.jpg" alt="facebook" class="social__img"></div>
+        <div class="social"><img src="../assets/images/google-auth.png" alt="google" class="social__img"></div>
+      </div>
+    </div>
+
+  </div>
+</div>

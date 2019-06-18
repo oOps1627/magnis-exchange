@@ -1,7 +1,23 @@
+<app-search></app-search>
+
 <div class="wrapper">
-  <div class="settings-top">
+
+  <div class="settings-top-box">
+
+    <span mat-button [matMenuTriggerFor]="menu" class="watchlist-toggle dropdown_closed" #trigger
+          (menuClosed)="toggleWatchlistDropdown(trigger)" (menuOpened)="toggleWatchlistDropdown(trigger)">My Watchlist</span>
+    <mat-menu #menu="matMenu">
+      <ul class="watchlist-items">
+        <li class="watchlist-item" mat-menu-item>Show All</li>
+        <li class="watchlist-item" mat-menu-item>Recently Invested</li>
+        <li class="watchlist-item" mat-menu-item>My Watchlist</li>
+      </ul>
+      <hr class="watchlist-line">
+      <button mat-menu-item class="watchlist-item_button"><i class="fa fa-plus"></i>Add new list</button>
+    </mat-menu>
 
   </div>
+
   <div class="markets">
     <div class="market market_title">
       <div class="market-section  market-section_name">Market</div>
@@ -31,14 +47,18 @@
           <app-graphic [data]="market.dataChange" [isPositiveChange]="(market.changeValue > 0)"></app-graphic>
         </div>
       </div>
-      <div class="market-section  market-section_sell"><div class="sell-icon">S</div> {{market.sellPrice}}</div>
-      <div class="market-section  market-section_sell"><div class="sell-icon">B</div> {{market.buyPrice}}</div>
+      <div class="market-section  market-section_sell">
+        <div class="sell-icon">S</div>
+        {{market.sellPrice}}</div>
+      <div class="market-section  market-section_sell">
+        <div class="sell-icon">B</div>
+        {{market.buyPrice}}</div>
       <div class="market-section  market-section_sentiment">
-          <span class="market-section_sentiment__text">{{market.sentiment}}%  Buying</span>
-          <mat-progress-bar mode="determinate" value="{{market.sentiment}}"></mat-progress-bar>
+        <span class="market-section_sentiment__text">{{market.sentiment}}%  Buying</span>
+        <mat-progress-bar mode="determinate" value="{{market.sentiment}}"></mat-progress-bar>
       </div>
     </div>
 
-    <button class="button-add-market"><i class="fa fa-plus"></i>Add Market</button>
+    <button class="button-add-market" (click)="openModalAddMarket()"><i class="fa fa-plus"></i>Add Market</button>
   </div>
 </div>

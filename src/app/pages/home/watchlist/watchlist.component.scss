@@ -4,16 +4,67 @@
 .wrapper {
   padding: 10px 40px;
 }
+
+.settings-top-box {
+  height: 50px;
+  padding: 10px 50px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid darken($light-background, 13%);
+}
+.watchlist-toggle {
+  color: $blue;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.watchlist-items {
+  padding: 5px 0;
+  margin: 0;
+  text-decoration: none;
+}
+.watchlist-item {
+  height: 35px;
+  line-height: 35px;
+  padding: 0 25px;
+}
+.watchlist-item_button {
+  color: $blue;
+  .fa {
+    margin-right: 10px;
+    font-weight: 100;
+  }
+}
+.watchlist-line {
+  height: 1px;
+  color: darken($light-background, 12%);
+  background-color: darken($light-background, 12%);
+  border: none;
+  width: 80%;
+  text-align: center;
+}
+
+.dropdown_closed::after {
+  content: '\f0d7';
+  margin-left: 8px;
+  font-family: FontAwesome;
+}
+.dropdown_opened::after {
+  content: '\f0da';
+  margin-left: 8px;
+  font-family: FontAwesome;
+}
+
 .markets {
   padding: 20px 50px;
 }
-
 .market_title {
   background-color: inherit;
   height: auto;
   text-transform: uppercase;
   font-weight: bold;
-  color: #000;
+  font-size: 16px !important;
 }
 
 .market-logo {
@@ -34,7 +85,6 @@
 .market-section_name__exchange-name {
   font-weight: bold;
   text-transform: uppercase;
-  color: #000;
 }
 .market-section_name__name {
   font-size: 12px;

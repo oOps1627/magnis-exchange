@@ -11,7 +11,9 @@ import { CopyTradersComponent } from './copy-traders/copy-traders.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatMenuModule } from '@angular/material';
 import { ComponentsModule } from '../../shared/components/components.module';
+import { FeaturesModule } from '../../features/features.module';
 
 
 @NgModule({
@@ -28,7 +30,9 @@ import { ComponentsModule } from '../../shared/components/components.module';
     MatSidenavModule,
     MatButtonModule,
     MatProgressBarModule,
-    ComponentsModule
+    MatMenuModule,
+    ComponentsModule,
+    FeaturesModule
   ]
 })
 export class HomeModule {

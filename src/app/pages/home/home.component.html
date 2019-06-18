@@ -1,10 +1,11 @@
-<mat-sidenav-container class="wrapper">
-  <mat-sidenav class="sidenav reverse" #sidenav mode="side" [opened]="true">
 
+<mat-sidenav-container class="wrapper">
+
+  <mat-sidenav class="sidenav reverse" #sidenav mode="side" [opened]="true">
     <div class="sidenav-box sidenav-box_user-box">
       <div class="user-picture" style="background-image: url(../assets/images/user-default.svg)"></div>
       <span>Name Surname</span>
-      <button mat-button class="button">Complete Profile</button>
+      <button mat-button class="button_blue button_complete-profile" >Complete Profile</button>
     </div>
 
     <div class="sidenav-box">
@@ -32,12 +33,8 @@
   </mat-sidenav>
 
   <mat-sidenav-content class="sidenav-content">
-    <header class="header">
-      <label>
-        <input type="text" class="search">
-      </label>
-    </header>
-    <button mat-button (click)="sidenav.toggle()">sidenav.toggle()</button>
-      <router-outlet></router-outlet>
+
+    <router-outlet></router-outlet>
+    <button mat-button (click)="sidenav.toggle()" class="sidenav-burger">|||</button>
   </mat-sidenav-content>
 </mat-sidenav-container>

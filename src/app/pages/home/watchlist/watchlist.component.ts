@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 
 import { MarketService } from '../../../core/services/market.service';
 import { Market } from '../../../core/models/market';
+import { MatDialog } from '@angular/material';
+import { AddMarketModalComponent } from '../../../features/add-market-modal/add-market-modal.component';
 
 @Component({
   selector: 'app-watchlist',
@@ -11,7 +13,7 @@ import { Market } from '../../../core/models/market';
 export class WatchlistComponent implements OnInit {
   markets: Market[] = [];
 
-  constructor(private marketService: MarketService) {
+  constructor(private marketService: MarketService, public dialog: MatDialog) {
   }
 
   ngOnInit() {
@@ -19,6 +21,17 @@ export class WatchlistComponent implements OnInit {
       this.markets = markets;
     }, error => {
       console.log(error);
+    });
+  }
+
+  private toggleWatchlistDropdown(target) {
+    target.classList.toggle('dropdown_opened');
+    target.classList.toggle('dropdown_closed');
+  }
+
+  private openModalAddMarket() {
+    const dialogRef = this.dialog.open(AddMarketModalComponent, {
+      width: '250px',
     });
   }
 

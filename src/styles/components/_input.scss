@@ -1,0 +1,7 @@
+.input-field {
+  width: 100%;
+  .input__suffix {
+    margin-right: 5px;
+    color: darken($light-background, 15%);
+  }
+}

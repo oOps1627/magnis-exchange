@@ -1,0 +1,19 @@
+@import "abstracts/colors";
+
+.wrapper {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+.button_auth {
+  margin-top: 50px;
+}
+.checkbox-box {
+  margin-top: 10px;
+}
+.forgot-password {
+  float: right;
+  cursor: pointer;
+  font-size: 16px;
+  color: $blue;
+}
