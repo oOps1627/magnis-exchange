@@ -8,12 +8,17 @@
 .button_auth {
   margin-top: 50px;
 }
-.checkbox-box {
+.options-line {
   margin-top: 10px;
 }
 .forgot-password {
   float: right;
   cursor: pointer;
   font-size: 16px;
+  line-height: 21px;
   color: $blue;
+}
+.invalid-feedback {
+  margin-bottom: 7px;
+  margin-top: -10px;
 }

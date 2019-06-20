@@ -1,22 +1,43 @@
 <div class="wrapper">
 
-  <mat-form-field class="input-field">
-    <input matInput type="text" placeholder="Username" name="username" required>
-    <i matSuffix class="fa fa-user input__suffix" aria-hidden="true"></i>
-  </mat-form-field>
-  <mat-form-field class="input-field">
-    <input matInput type="text" placeholder="E-mail" name="email" required>
-    <i matSuffix class="fa fa-envelope-o input__suffix" aria-hidden="true"></i>
-  </mat-form-field>
-  <mat-form-field class="input-field">
-    <input matInput type="password" placeholder="Password" name="password" required>
-    <i matSuffix class="fa fa-lock input__suffix" aria-hidden="true"></i>
-  </mat-form-field>
-  <mat-form-field class="input-field">
-    <input matInput type="password" placeholder="Confirm password" name="re-password" required>
-    <i matSuffix class="fa fa-lock input__suffix" aria-hidden="true"></i>
-  </mat-form-field>
+  <form [formGroup]="registerForm" (submit)="register()">
 
-  <button mat-button class="button_blue button_auth">Sign in</button>
+    <mat-form-field class="input-field">
+      <input matInput type="text" placeholder="Username" name="username" formControlName="username">
+      <i matSuffix class="fa fa-user input__suffix" aria-hidden="true"></i>
+    </mat-form-field>
+    <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+      <mat-error *ngIf="f.username.errors.required">Username is required</mat-error>
+    </div>
+
+    <mat-form-field class="input-field">
+      <input matInput type="text" placeholder="E-mail" name="email" formControlName="email">
+      <i matSuffix class="fa fa-envelope-o input__suffix" aria-hidden="true"></i>
+    </mat-form-field>
+    <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+      <mat-error *ngIf="f.email.errors.required">Email is required</mat-error>
+      <mat-error *ngIf="f.email.errors.email">Email must be a valid email address</mat-error>
+    </div>
+
+    <mat-form-field class="input-field">
+      <input matInput type="password" placeholder="Password" name="password" formControlName="password">
+      <i matSuffix class="fa fa-lock input__suffix" aria-hidden="true"></i>
+    </mat-form-field>
+    <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+      <mat-error *ngIf="f.password.errors.required">Password is required</mat-error>
+      <mat-error *ngIf="f.password.errors.minlength">Minimal length must be 4</mat-error>
+    </div>
+
+    <mat-form-field class="input-field">
+      <input matInput type="password" placeholder="Confirm password" name="confirmPassword" formControlName="confirmPassword">
+      <i matSuffix class="fa fa-lock input__suffix" aria-hidden="true"></i>
+    </mat-form-field>
+    <div *ngIf="submitted && f.confirmPassword.errors" class="invalid-feedback">
+      <mat-error *ngIf="f.confirmPassword.errors.required">Password is required</mat-error>
+      <mat-error *ngIf="f.confirmPassword.errors.mustMatch">Password must match</mat-error>
+    </div>
+
+    <button type="submit" mat-button class="button_blue button_auth">Sign in</button>
+  </form>
 
 </div>

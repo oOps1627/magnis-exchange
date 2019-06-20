@@ -1,16 +1,30 @@
 <div class="wrapper">
 
-  <mat-form-field class="input-field">
-    <input matInput type="text" placeholder="Username" name="username" required>
-    <i matSuffix class="fa fa-user input__suffix" aria-hidden="true"></i>
-  </mat-form-field>
-  <mat-form-field class="input-field">
-    <input matInput type="password" placeholder="Password" name="password" required>
-    <i matSuffix class="fa fa-lock input__suffix" aria-hidden="true"></i>
-  </mat-form-field>
-  <div class="checkbox-box">
-    <mat-checkbox color="primary">Stay Signed in</mat-checkbox> <span class="forgot-password">Forgot password?</span>
-  </div>
-  <button mat-button class="button_blue button_auth">Sign in</button>
+  <form [formGroup]="loginForm" (submit)="login()">
+
+    <mat-form-field class="input-field">
+      <input matInput type="text" placeholder="Username" name="username" formControlName="username">
+      <i matSuffix class="fa fa-user input__suffix" aria-hidden="true"></i>
+    </mat-form-field>
+    <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+      <mat-error *ngIf="f.username.errors.required">Username is required</mat-error>
+    </div>
+
+    <mat-form-field class="input-field">
+      <input matInput type="password" placeholder="Password" name="password" formControlName="password">
+      <i matSuffix class="fa fa-lock input__suffix" aria-hidden="true"></i>
+    </mat-form-field>
+    <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+      <mat-error *ngIf="f.password.errors.required">Password is required</mat-error>
+      <mat-error *ngIf="f.password.errors.minlength">Minimal length must be 4</mat-error>
+    </div>
+
+    <div class="options-line">
+        <mat-checkbox color="primary" formControlName="rememberMe">Stay Signed in</mat-checkbox>
+      <span class="forgot-password">Forgot password?</span>
+    </div>
+
+    <button type="submit" mat-button class="button_blue button_auth">Sign in</button>
+  </form>
 
 </div>
