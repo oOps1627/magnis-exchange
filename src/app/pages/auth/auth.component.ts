@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from 'angularx-social-login';
-import { FacebookLoginProvider, GoogleLoginProvider } from 'angularx-social-login';
+
+import { AuthenticateService } from '../../core/services/auth.service';
 
 @Component({
   selector: 'app-auth',
@@ -9,16 +9,16 @@ import { FacebookLoginProvider, GoogleLoginProvider } from 'angularx-social-logi
 })
 export class AuthComponent implements OnInit {
 
-  constructor(private authService: AuthService) {
+  constructor(private authService: AuthenticateService) {
   }
 
   ngOnInit() {
+    this.authService.logout();
   }
 
   loginWithGoogle() {
-    this.authService.signIn(GoogleLoginProvider.PROVIDER_ID).then((data) => {
-      console.log(data);
-    });
+    this.authService.loginWithGoogle();
+
   }
 
 }

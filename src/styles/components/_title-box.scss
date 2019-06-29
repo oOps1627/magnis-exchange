@@ -1,0 +1,13 @@
+@import "abstracts/colors";
+
+.title-box {
+  height: 50px;
+  position: relative;
+  color: $grey;
+  font-size: 16px;
+  display: flex;
+  align-items: flex-end;
+  padding: 0 40px 10px;
+  box-sizing: border-box;
+  border-bottom: 1px solid darken($light-background, 13%);
+}

@@ -18,7 +18,7 @@ const users = [{
   username: 'oops',
   firstName: 'Andrii',
   lastName: 'Krashivskyi',
-  password: 'test'
+  password: 'test',
 }];
 
 @Injectable()

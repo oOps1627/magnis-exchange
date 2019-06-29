@@ -1,5 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatButtonModule } from '@angular/material';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatMenuModule } from '@angular/material';
 
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
@@ -7,14 +11,9 @@ import { WatchlistComponent } from './watchlist/watchlist.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { TradeMarketsComponent } from './trade-markets/trade-markets.component';
 import { CopyTradersComponent } from './copy-traders/copy-traders.component';
-
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatButtonModule } from '@angular/material';
-import { MatProgressBarModule } from '@angular/material/progress-bar';
-import { MatMenuModule } from '@angular/material';
 import { ComponentsModule } from '../../shared/components/components.module';
 import { FeaturesModule } from '../../features/features.module';
-
+import { SettingsModule } from './settings/settings.module';
 
 @NgModule({
   declarations: [
@@ -32,7 +31,8 @@ import { FeaturesModule } from '../../features/features.module';
     MatProgressBarModule,
     MatMenuModule,
     ComponentsModule,
-    FeaturesModule
+    FeaturesModule,
+    SettingsModule
   ]
 })
 export class HomeModule {

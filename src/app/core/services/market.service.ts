@@ -5,7 +5,7 @@ import { Market } from "../models/market";
 const marketsData: Market[] = [
   {
     name: 'Apple',
-    exchangeName: 'AAPL',
+    symbol: 'AAPL',
     imagePath: 'assets/images/apple-logo.png',
     changePercent: -2.3,
     changeValue: -4.32,
@@ -16,7 +16,7 @@ const marketsData: Market[] = [
   },
   {
     name: 'Xiaomi',
-    exchangeName: 'XM',
+    symbol: 'XM',
     imagePath: 'assets/images/apple-logo.png',
     changePercent: 2.5,
     changeValue: 5.123,

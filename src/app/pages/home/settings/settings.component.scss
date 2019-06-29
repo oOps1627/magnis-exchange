@@ -1,0 +1,37 @@
+@import "components/title-box";
+@import "abstracts/colors";
+
+.wrapper {
+  padding: 10px 40px;
+}
+.navigation {
+  padding-bottom: 0;
+}
+.navigation-list {
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  list-style-type: none;
+}
+.navigation-item {
+  margin: 0 20px -2px;
+  padding: 5px;
+  cursor: pointer;
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+.navigation-item_active {
+  border-bottom: 3px solid $blue;
+  a {
+    color: $blue;
+    font-weight: bold;
+  }
+}
+.content-box {
+  padding: 50px 0;
+  width: 100%;
+  height: auto;
+  position: relative;
+}

@@ -1,5 +1,5 @@
 @import "abstracts/colors";
-@import "components/market";
+@import "../../../../styles/components/cards";
 
 .wrapper {
   padding: 10px 40px;
@@ -59,7 +59,7 @@
 .markets {
   padding: 20px 50px;
 }
-.market_title {
+.markets_title {
   background-color: inherit;
   height: auto;
   text-transform: uppercase;
@@ -75,41 +75,41 @@
   max-width: 100%;
   height: auto; max-height: 100%;
 }
-.market-section_name {
+.market-name {
   width: 20%;
 }
-.market-section_name__name-box {
+.market-name__name-box {
   display: block;
   margin: 0 10px;
 }
-.market-section_name__exchange-name {
+.market-name__exchange-name {
   font-weight: bold;
   text-transform: uppercase;
 }
-.market-section_name__name {
+.market-name__name {
   font-size: 12px;
   margin-top: 5px;
 }
-.market-section_change__change-value {
+.market-change__change-value {
   font-size: 12px;
   margin-top: 5px;
 }
 
-.market-section_change {
+.market-change {
   width: 25%;
   font-weight: bold;
 }
-.market-section_change__graph {
+.market-change__graph {
   width: 150px;
   height: 100%;
   margin: 0 15px;
   position: relative;
 }
-.market-section_change__change-percent {
+.market-change__change-percent {
   font-size: 16px;
 }
 
-.market-section_sell {
+.market-sell {
   width: 15%;
   font-size: 16px;
   font-weight: bold;
@@ -126,13 +126,13 @@
   background-color: $light-background;
 }
 
-.market-section_sentiment {
+.market-sentiment {
   width: 25%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.market-section_sentiment__text {
+.market-sentiment__text {
   align-self: flex-start;
   margin: 5px 0;
 }

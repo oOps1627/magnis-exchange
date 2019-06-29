@@ -2,6 +2,7 @@ export class User {
   username: string;
   firstName: string;
   lastName: string;
-  password: string;
-  token?: string;
+  token: string;
+  photoUrl = 'assets/images/user-default.svg';
+  password?: string;
 }

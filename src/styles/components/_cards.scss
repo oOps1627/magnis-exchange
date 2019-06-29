@@ -1,0 +1,45 @@
+@import "abstracts/colors";
+
+.card {
+  width: auto;
+  height: auto;
+  position: relative;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: $dark-text;
+  font-size: 14px;
+  padding: 7px;
+  display: inline-block;
+}
+
+.card_long {
+  width: 100%;
+  height: 60px;
+  margin-top: 10px;
+  padding: 7px 20px;
+  display: flex;
+}
+.card_long__section {
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.card-carousel {
+  position: relative;
+  width: 250px;
+  margin-right: 20px;
+}
+.card-carousel-logo {
+  width: 100%;
+  height: auto;
+  position: relative;
+  box-sizing: border-box;
+  padding: 10px;
+  text-align: center;
+}
+.card-carousel-logo__img {
+  max-width: 50px;
+  height: auto; max-height: 50px;
+}

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MarketService } from '../../../core/services/market.service';
+import { Market } from '../../../core/models/market';
 
 @Component({
   selector: 'app-trade-markets',
@@ -6,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./trade-markets.component.scss']
 })
 export class TradeMarketsComponent implements OnInit {
-
-  constructor() { }
+  featuredMarkets: Market[] = [];
+  constructor(private marketService: MarketService) { }
 
   ngOnInit() {
+    this.marketService.getMarkets().subscribe(markets => {
+      this.featuredMarkets = markets;
+    });
   }
 
 }

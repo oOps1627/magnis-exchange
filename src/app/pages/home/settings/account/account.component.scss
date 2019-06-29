@@ -1,0 +1,30 @@
+@import "abstracts/colors";
+
+.container {
+  max-width: 1200px;
+  height: auto;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+}
+.settings-box {
+  background-color: #fff;
+  padding: 10px;
+  margin: 0 1.5%;
+  color: $grey;
+}
+.main-settings {
+  width: 65%;
+}
+.settings-section {
+  padding: 10px;
+  border-bottom: 1px solid darken($light-background, 13%);
+}
+
+
+
+.additional-settings {
+  width: 32%;
+}
+
+

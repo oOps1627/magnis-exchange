@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../../core/services/auth.service';
+import { AuthenticateService } from '../../core/services/auth.service';
 import { User } from '../../core/models/user';
 import { Router } from '@angular/router';
 
@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
  currentUser: User;
-  constructor(private authService: AuthService, private router: Router) { }
+  constructor(private authService: AuthenticateService, private router: Router) { }
 
   ngOnInit() {
    this.currentUser = this.authService.currentUserValue;

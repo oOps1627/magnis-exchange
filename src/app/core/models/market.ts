@@ -1,6 +1,6 @@
 export class Market {
   name: string;
-  exchangeName: string;
+  symbol: string;
   imagePath: string;
   changePercent: number;
   changeValue: number;

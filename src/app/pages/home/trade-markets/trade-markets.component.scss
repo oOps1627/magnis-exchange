@@ -1,0 +1,25 @@
+@import "components/cards";
+@import "abstracts/colors";
+@import "components/title-box";
+
+.wrapper {
+  width: 100%;
+  height: auto;
+  position: relative;
+  padding: 10px 40px;
+  box-sizing: border-box;
+}
+.markets {
+  width: 100%;
+  height: auto;
+}
+.markets-title {
+
+}
+.markets-content {
+  padding: 15px 0;
+}
+
+.card-description {
+  padding: 10px;
+}

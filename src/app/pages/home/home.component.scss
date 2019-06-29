@@ -35,8 +35,8 @@
 .user-picture {
   width: 70px;
   height: 70px;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
   border: 2px solid $light-background;
   border-radius: 50%;
   margin: 15px auto;
