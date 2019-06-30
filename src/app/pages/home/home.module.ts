@@ -22,7 +22,7 @@ import {DirectivesModule} from '../../shared/directives/directives.module';
     HomeComponent,
     PortfolioComponent,
     TradeMarketsComponent,
-    CopyTradersComponent
+    CopyTradersComponent,
   ],
   imports: [
     CommonModule,
