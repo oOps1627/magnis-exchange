@@ -3,7 +3,7 @@
 
   <mat-sidenav class="sidenav reverse" #sidenav mode="side" [opened]="true">
     <div class="sidenav-box sidenav-box_user-box">
-      <div class="user-picture" [ngStyle]="{background: 'url(' + currentUser.photoUrl + ')'}"></div>
+      <div class="user-picture" appUserPicture></div>
       <span>{{currentUser.firstName}} {{currentUser.lastName}}</span>
       <button mat-button class="button_blue button_complete-profile" >Complete Profile</button>
     </div>

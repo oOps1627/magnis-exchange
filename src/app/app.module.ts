@@ -11,7 +11,6 @@ import { fakeBackendProvider } from './helpers/fakeBackend';
 import { SocialLoginModule, AuthServiceConfig } from 'angularx-social-login';
 import { oauthProvideConfig } from './helpers/oauth.config';
 
-
 @NgModule({
   declarations: [
     AppComponent,
