@@ -14,6 +14,7 @@ import { CopyTradersComponent } from './copy-traders/copy-traders.component';
 import { ComponentsModule } from '../../shared/components/components.module';
 import { FeaturesModule } from '../../features/features.module';
 import { SettingsModule } from './settings/settings.module';
+import {DirectivesModule} from '../../shared/directives/directives.module';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { SettingsModule } from './settings/settings.module';
     MatMenuModule,
     ComponentsModule,
     FeaturesModule,
-    SettingsModule
+    SettingsModule,
+    DirectivesModule
   ]
 })
 export class HomeModule {
