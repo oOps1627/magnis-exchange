@@ -8,7 +8,11 @@ import { FeaturesModule } from '../../../features/features.module';
 import { DirectivesModule } from '../../../shared/directives/directives.module';
 
 @NgModule({
-  declarations: [AccountComponent, GeneralComponent, SettingsComponent],
+  declarations: [
+    AccountComponent,
+    GeneralComponent,
+    SettingsComponent,
+    ],
   imports: [
     CommonModule,
     SettingsRoutingModule,
